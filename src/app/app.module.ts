@@ -13,6 +13,8 @@ import { HeaderPractice2Component } from './practice2/header-practice2/header-pr
 import { CarouselPractice2Component } from './practice2/carousel-practice2/carousel-practice2.component';
 import { CollectionPractice2Component } from './practice2/collection-practice2/collection-practice2.component';
 import { FooterPractice2Component } from './practice2/footer-practice2/footer-practice2.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { FooterPractice2Component } from './practice2/footer-practice2/footer-pr
     HeaderPractice2Component,
     CarouselPractice2Component,
     CollectionPractice2Component,
-    FooterPractice2Component
+    FooterPractice2Component,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

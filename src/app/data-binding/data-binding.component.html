@@ -1,0 +1,70 @@
+<!-- BINDING DATA -->
+<h1>{{ title }}</h1>
+
+<!-- Cú pháp interpolation (model -> view)  -->
+<h4>1. Interpolation</h4>
+<p>Họ tên: {{ fullName }}</p>
+<p>Tuổi: {{ age }}</p>
+<p>Tình trạng FA: {{ isFA ? "Ế" : "Có ny" }}</p>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Role: {{ user.role ? "Admin" : "Client" }}</p>
+<img src="{{ imgSrc }}" alt="" srcset="" />
+
+<!-- Property binding (model -> view)-->
+<h4>2. Property binding(one-way)</h4>
+<img [src]="imgSrc" alt="" />
+<img bind-src="imgSrc" alt="" srcset="" />
+<br /><br />
+<button class="btn btn-success" [disabled]="isDisable">Hello</button>
+
+<!-- Event binding one way (view -> model) -->
+<h4>3. Event binding</h4>
+
+<button class="btn btn-primary" (click)="clickMe()">Click</button>
+<br />
+<br />
+<br />
+<!-- BS4 form check -->
+<div class="form-check">
+  <label class="form-check-label">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      name=""
+      id=""
+      value="checkedValue"
+      checked
+    />
+    Display value
+  </label>
+</div>
+<!-- form group -->
+<div class="form-group w-50">
+  <label for=""></label>
+  <input
+    type="text"
+    name=""
+    id=""
+    class="form-control"
+    placeholder=""
+    aria-describedby="helpId"
+    (keyup)="getEmail($event)"
+  />
+</div>
+
+<p>Email: {{ email }}</p>
+
+<!-- Two way biding (ngModel) view thay doi model thay doi, model thay doi, view lai thay doi -->
+<div class="form-group">
+  <label for=""></label>
+  <input
+    type="text"
+    name=""
+    id=""
+    class="form-control"
+    placeholder=""
+    aria-describedby="helpId"
+    [(ngModel)]="email"
+  />
+</div>
