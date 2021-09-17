@@ -15,6 +15,8 @@ import { CollectionPractice2Component } from './practice2/collection-practice2/c
 import { FooterPractice2Component } from './practice2/footer-practice2/footer-practice2.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
+import { StructuralComponent } from './directives/structural/structural.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FormsModule } from '@angular/forms';
     CarouselPractice2Component,
     CollectionPractice2Component,
     FooterPractice2Component,
-    DataBindingComponent
+    DataBindingComponent,
+    DirectivesComponent,
+    StructuralComponent
   ],
   imports: [
     BrowserModule,
